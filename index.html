@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <!-- Day.js for time -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <nav class="navbar bg-primary">
+            <div class="container-fluid">
+                <span class="navbar-brand fs-2 mb-0 h1 mx-auto text-white">Weather Dashboard</span>
+            </div>
+        </nav>
+
+        <div class="row">
+            <!-- Search Column -->
+            <div class="col-12 col-md-4">
+                <h2>Search for a city:</h2>
+                <div class="input-group mb-3">
+                    <input id="cityToSearch" type="text" class="form-control" aria-label="City Name"
+                        aria-describedby="inputGroup-sizing-default" placeholder="Search City">
+                </div>
+                <button id="searchBtn" type="button" class="btn btn-primary mx-auto mb-2">Search</button>
+                <hr>
+                <h3>Search History</h3>
+                <p id="history"></p>
+            </div>
+
+            <!-- Weather Display Column -->
+            <div class="col-12 col-md-8">
+                <div class="current border m-3 border-dark-subtle border-2">
+                    <h2>
+                        <span id="city-name">City Name</span>
+                        <img id="weather-icon" />
+                    </h2>
+                    <h2><span id="current-date"></span></h2>
+                    <p id="temp">Temp: </p>
+                    <p id="wind">Wind: </p>
+                    <p id="humid">Humidity: </p>
+                </div>
+
+                <!-- Forecast Section -->
+                <nav class="navbar bg-white">
+                    <div class="container-fluid">
+                        <span class="navbar-brand fs-3 mb-0 fw-bold">5-Day Forecast:</span>
+                    </div>
+                </nav>
+
+                <div class="row">
+                    <div class="forecast col-2 m-3">
+                        <p id="date-0"></p>
+                        <p id="icon-0"></p>
+                        <p id="temp-0"></p>
+                        <p id="wind-0"></p>
+                        <p id="humid-0"></p>
+                    </div>
+                    <div class="forecast col-2 m-auto">
+                        <p id="date-1"></p>
+                        <p id="icon-1"></p>
+                        <p id="temp-1"></p>
+                        <p id="wind-1"></p>
+                        <p id="humid-1"></p>
+                    </div>
+                    <div class="forecast col-2 m-auto">
+                        <p id="date-2"></p>
+                        <p id="icon-2"></p>
+                        <p id="temp-2"></p>
+                        <p id="wind-2"></p>
+                        <p id="humid-2"></p>
+                    </div>
+                    <div class="forecast col-2 m-auto">
+                        <p id="date-3"></p>
+                        <p id="icon-3"></p>
+                        <p id="temp-3"></p>
+                        <p id="wind-3"></p>
+                        <p id="humid-3"></p>
+                    </div>
+                    <div class="forecast col-2 m-auto">
+                        <p id="date-4"></p>
+                        <p id="icon-4"></p>
+                        <p id="temp-4"></p>
+                        <p id="wind-4"></p>
+                        <p id="humid-4"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
